@@ -8,7 +8,6 @@ import { openModal, closeModal } from '../../app/store/actions/modalActions'
 import LoadingComponent from '../../components/common/LoadingComponent'
 import StudentForm from '../../components/students/StudentForm'
 import StudentService from '../../app/api/studentService'
-import StudentProfile from '../../components/students/StudentProfile'
 import useFetchStudents from '../../app/hooks/useFetchStudents'
 
 const actions = {
@@ -122,20 +121,7 @@ const Students = ({ openModal, closeModal }) => {
                     />
                   }
                 />
-                <Popup
-                  inverted
-                  content="Upload Photo"
-                  trigger={
-                    <Button
-                      color="vk"
-                      icon="cloud upload"
-                      loading={loadingAction}
-                      onClick={() => {
-                        openModal(<StudentProfile studentId={student.id} />, 'large', true)
-                      }}
-                    />
-                  }
-                />
+                
               </Table.Cell>
             </Table.Row>
           ))}

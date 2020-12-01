@@ -51,16 +51,7 @@ const baseApi = {
   post: (url, body) => http.post(url, body).then(responseBody),
   put: (url, body) => http.put(url, body).then(responseBody),
   delete: (url) => http.delete(url).then(responseBody),
-  // Upload Files
-  postForm: (url, file) => {
-    const formData = new FormData()
-    formData.append('file', file)
-    return http
-      .post(url, formData, {
-        headers: { 'Content-Type': 'multipart/form-data' },
-      })
-      .then(responseBody)
-  },
+
 }
 
 export default baseApi

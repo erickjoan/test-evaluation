@@ -12,8 +12,6 @@ class StudentService {
 
   static updateStudent = (student) => baseApi.put(STUDENT_ENDPOINT, student)
 
-  static uploadStudentPhoto = (id, photo) => baseApi.postForm(`${STUDENT_ENDPOINT}/subir/${id}`, photo)
-
   static removeStudent = (id) => baseApi.delete(getStudentUrl(id))
 }
 
